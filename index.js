@@ -6,6 +6,10 @@ const axios = require("axios");
 
 app.use(express.json());
 
+app.get("/", function (req, res) {
+  res.send("Delegate server");
+});
+
 app.post("/", async function (request, response) {
   const { url } = request.body;
   try {

@@ -3,6 +3,7 @@ var http = require("http"),
   app = express(),
   server = http.createServer(app);
 const axios = require("axios");
+const port = process.env.PORT || 3001;
 
 app.use(express.json());
 
@@ -20,7 +21,7 @@ app.post("/", async function (request, response) {
   }
 });
 
-server.listen(80);
+server.listen(port);
 console.log(
   "Express server listening on port %d in %s mode",
   server.address().port,
